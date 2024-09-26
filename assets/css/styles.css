@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work sans', sans-serif;
+}
+
+body {
+    height: 100vh; 
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-picker-container {
+    background: #ffff;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.color-bar input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 93%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 6px;
+    background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red);
+}
+
+.color-bar input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background: var(--thumb-color); 
+    border: 2px solid rgb(77, 77, 77); 
+    cursor: pointer; 
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+input[type="text"] {
+    width: 100px;
+    margin-left: 10px;
+    
+}
+
+.wrapper-hsl{
+    margin-top: 10px;
+    margin-left: 7px;
+}
+
+
+input[type="range"] {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.thumb {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    pointer-events: none; 
+    transform: translate(-50%, -50%); 
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorConverter</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="color-picker-container">
+        <div class="color-picker">
+            <div class="color-box">
+                <canvas id="color-canvas" width="300" height="300"></canvas>
+            </div>
+            <div class="color-bar">
+                <input type="range" id="hue-slider" min="0" max="360" value="0">
+            </div>
+        </div>
+
+        <div class="color-values">
+            <div class="wrapper">
+                R<input type="range" min="0" max="255" value="0" id="red" oninput="colors()">
+                <span id="outputred">0</span>
+            </div>
+            <div class="wrapper">
+                G<input type="range" min="0" max="255" value="0" id="green" oninput="colors()">
+                <span id="outputgreen">0</span>
+            </div>
+            <div class="wrapper">
+                B<input type="range" min="0" max="255" value="0" id="blue" oninput="colors()">
+                <span id="outputblue">0</span>
+            </div>
+            <div class="wrapper">
+                CMYK: <input type="text" id="cmyk" placeholder="C, M, Y, K" oninput="updateFromCMYK()">
+            </div>
+            <div class="wrapper-hsl">
+                HSL: <input type="text" id="hsl" placeholder="H, S, L" oninput="updateFromHSL()">
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/colorConverter.js"></script>
+</body>
+</html>
